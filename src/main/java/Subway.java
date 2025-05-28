@@ -49,7 +49,7 @@ public class Subway implements Transport {
 
     @Override
     public String getSummary() {
-        return "";
+        return String.format("지하철 (%d번) - 수익: %d원, 탑승자 수: %d명", id, revenue, passengers.size());
     }
 
 }
