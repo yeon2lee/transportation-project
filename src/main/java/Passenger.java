@@ -1,10 +1,17 @@
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
+@Getter
+@Setter
 public class Passenger {
 
     private Long id;
     private int age;
     private Account account;
+    private long fromId;
+    private long toId;
     private List<Movement> rideHistory;
 
     public Passenger(Long id, int age, Account account, List<Movement> rideHistory) {
@@ -12,10 +19,6 @@ public class Passenger {
         this.age = age;
         this.account = account;
         this.rideHistory = rideHistory;
-    }
-
-    public Account getAccount() {
-        return account;
     }
 
     public void printInfo() {
